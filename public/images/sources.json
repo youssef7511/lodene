@@ -1,0 +1,74 @@
+{
+  "note": "Lodene public-site assets used in the local collaboration preview. Confirm publication approval before hosting.",
+  "assets": [
+    {
+      "file": "lodene-logo.jpg",
+      "source": "https://horizons-cdn.hostinger.com/9ae4f645-ce84-4206-bbc1-ad7e83c327f5/whatsapp-image-hhkhkhkl2026-06-26-at-13.11.23-zwSoh.jpeg",
+      "bytes": 140403,
+      "content_type": "image/jpeg"
+    },
+    {
+      "file": "driving.jpg",
+      "source": "https://horizons-cdn.hostinger.com/9ae4f645-ce84-4206-bbc1-ad7e83c327f5/loden-hero.jpg-KRqCA.jpeg",
+      "bytes": 168232,
+      "content_type": "image/jpeg"
+    },
+    {
+      "file": "vtc.webp",
+      "source": "https://horizons-cdn.hostinger.com/9ae4f645-ce84-4206-bbc1-ad7e83c327f5/vtc-confort-pro-N4c1T.webp",
+      "bytes": 140662,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "sst.webp",
+      "source": "https://lodene.fr/img/sst-initial.webp",
+      "bytes": 61070,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "forklift.webp",
+      "source": "https://lodene.fr/img/chariots-r489.webp",
+      "bytes": 75726,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "stacker.webp",
+      "source": "https://horizons-cdn.hostinger.com/9ae4f645-ce84-4206-bbc1-ad7e83c327f5/gerbeur-r485-vEVwV.webp",
+      "bytes": 165174,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "platform.webp",
+      "source": "https://horizons-cdn.hostinger.com/9ae4f645-ce84-4206-bbc1-ad7e83c327f5/nacelles-pemp-r486-1oPkr.webp",
+      "bytes": 160478,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "logistics.jpg",
+      "source": "https://horizons-cdn.hostinger.com/9ae4f645-ce84-4206-bbc1-ad7e83c327f5/9d037ed41417a98a46b5fecde70e1c20.jpg",
+      "bytes": 59399,
+      "content_type": "image/jpeg"
+    },
+    {
+      "file": "scooter.png",
+      "source": "https://horizons-cdn.hostinger.com/9ae4f645-ce84-4206-bbc1-ad7e83c327f5/gemini_generated_image_vybgjqvybgjqvybg-M0TZG.png",
+      "bytes": 1794921,
+      "content_type": "image/png"
+    },
+    {
+      "file": "backhoe.png",
+      "source": "Generated with OpenAI image generation for this local concept",
+      "note": "Illustrative parked backhoe loader, not a photograph of the actual centre"
+    },
+    {
+      "file": "language-workshop.png",
+      "source": "Generated with OpenAI image generation for this local concept",
+      "note": "Illustrative adult language workshop, not a photograph of the actual centre"
+    },
+    {
+      "file": "massar-quiz.webp",
+      "source": "../../../front/public/marketing/question-preview.webp",
+      "note": "Copy of existing Massar marketing image; original unchanged"
+    }
+  ]
+}
