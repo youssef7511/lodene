@@ -1,0 +1,11 @@
+{
+ "page": "out/index.html",
+ "url": null,
+ "root": "out",
+ "kind": "service",
+ "category": "formation à la conduite et compétences professionnelles",
+ "primary": "Contacter LODENE",
+ "rounds": 3,
+ "start": "2026-11-17T19:41:38.847Z",
+ "by": "gate.mjs --start"
+}

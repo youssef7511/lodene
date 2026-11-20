@@ -1,0 +1,2793 @@
+{
+ "start": "2026-11-17T19:41:38.847Z",
+ "round": 3,
+ "idle": 0,
+ "errors": 2,
+ "status": "open",
+ "history": [
+  {
+   "at": "2026-11-17T19:44:49.586Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 80,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-18T14:20:17.601Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 67,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-18T15:01:08.551Z",
+   "mode": "manual",
+   "status": "open",
+   "fails": 67,
+   "round": 3,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "out/index.html",
+  "url": null,
+  "root": "out",
+  "kind": "service",
+  "category": "formation à la conduite et compétences professionnelles",
+  "primary": "Contacter LODENE",
+  "rounds": 3,
+  "start": "2026-11-17T19:41:38.847Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "roundKey": "30867fa2657601a9:da39a3ee",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "30867fa2657601a9",
+ "page": "out/index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "empty-visual",
+    "where": "li.service-carousel-item:nth-of-type(6) > a.service-card.lodene > div.service-card-image.image-langues > img \"language-workshop.png\"",
+    "msg": "the picture language-workshop.png never loaded: its frame shows empty",
+    "fix": "make the visual draw at every width: a picture that loads, an effect that renders, or its still fallback; never an empty frame",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "empty-visual"
+    ],
+    "wheres": [
+     "li.service-carousel-item:nth-of-type(6) > a.service-card.lodene > div.service-card-image.image-langues > img \"language-workshop.png\""
+    ]
+   },
+   {
+    "check": "flush",
+    "where": "div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(6) > div.scroll-world-scrim",
+    "msg": "its last line sits 0px above the lower edge of section.scroll-world, where the ground changes to section#univers",
+    "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "flush"
+    ],
+    "wheres": [
+     "div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(6) > div.scroll-world-scrim"
+    ]
+   },
+   {
+    "check": "nav",
+    "where": "header.site-header > div.container.header-inner > a.brand-home \"Massar AUTO-ÉCOLE × LODENE FORMATION\"",
+    "msg": "nav link wraps to a second line",
+    "fix": "make the nav one bar from the content's left edge to its right edge, with every link and action inside it",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "nav"
+    ],
+    "wheres": [
+     "header.site-header > div.container.header-inner > a.brand-home \"Massar AUTO-ÉCOLE × LODENE FORMATION\""
+    ]
+   },
+   {
+    "check": "pinned",
+    "where": "main#main-content > section.scroll-world > div.scroll-world-stage \"Massar Code et auto-écoles Tunisie + LOD\"",
+    "msg": "held on screen for 6 screens of scroll (position: sticky) while the page moves on",
+    "fix": "let the section scroll with the page",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "pinned"
+    ],
+    "wheres": [
+     "main#main-content > section.scroll-world > div.scroll-world-stage \"Massar Code et auto-écoles Tunisie + LOD\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#collaboration \"Avancer ensemble, chacun avec son savoir\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#collaboration \"Avancer ensemble, chacun avec son savoir\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#etapes \"De l’envie au bon interlocuteur.\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#etapes \"De l’envie au bon interlocuteur.\""
+    ]
+   },
+   {
+    "check": "button-styles",
+    "where": "(one screen)",
+    "msg": "3 button styles on one screen: soft, fill #ffffff, outline #dfe6ef (\"Votre cap\"); soft, fill #f5f8fc (\"Massar Code et auto-écoles Tunisie\"); soft, outline #dce4ec (\"Mon espace\"); the odd one out: \"Mon espace\"",
+    "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "button-styles"
+    ],
+    "wheres": [
+     "(one screen)"
+    ]
+   },
+   {
+    "check": "button-styles",
+    "where": "(the page)",
+    "msg": "4 button styles on the page: soft, outline #dce4ec x1 (\"Mon espace\"); soft, fill #f5f8fc x2 (\"Massar Code et auto-écoles Tunisie\"); soft, fill #ffffff, outline #dfe6ef x6 (\"Votre cap\"); soft, fill #007b64 x2 (\"Contacter LODENE\")",
+    "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "button-styles"
+    ],
+    "wheres": [
+     "(the page)"
+    ]
+   },
+   {
+    "check": "copy-headings",
+    "where": "section#univers > div.section-heading > div > h2 \"Vous voulez aller où ?\"",
+    "msg": "\"Vous voulez aller où ?\" names no product, part, place or section (4 headings like it; at most one brand line per page) (and 3 more like it: \"Avancer ensemble, chacun\", \"De l’envie au bon interl\", \"Faites le premier pas\")",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headings"
+    ],
+    "wheres": [
+     "section#univers > div.section-heading > div > h2 \"Vous voulez aller où ?\""
+    ]
+   },
+   {
+    "check": "copy-actions",
+    "where": "section.scroll-world > div.scroll-world-stage > div.journey-chapter-nav > button:nth-of-type(3) \"Conduite et engins\"",
+    "msg": "6 actions in the hero (\"Votre cap\", \"Code Massar\", \"Conduite et engins\", \"VTC et logistique\", \"SST et langues\", \"Votre prochaine étape\"); at most 2",
+    "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-actions"
+    ],
+    "wheres": [
+     "section.scroll-world > div.scroll-world-stage > div.journey-chapter-nav > button:nth-of-type(3) \"Conduite et engins\""
+    ]
+   },
+   {
+    "check": "top-stagger",
+    "where": "section#collaboration > div.container.collaboration-grid > div.collaboration-partners \"Massar AUTO-ÉCOLE La route commence par \"",
+    "msg": "2 boxes side by side start at different heights (+0, +27px)",
+    "fix": "align the tops of the boxes in the row (one floor, one ceiling)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "top-stagger"
+    ],
+    "wheres": [
+     "section#collaboration > div.container.collaboration-grid > div.collaboration-partners \"Massar AUTO-ÉCOLE La route commence par \""
+    ]
+   },
+   {
+    "check": "off-grid",
+    "where": "section#univers > div.service-carousel > div.service-carousel-controls > button.service-carousel-control.previous",
+    "msg": "left edge at 77px, 23px off the page margin at 100px (16 elements, like button.selected)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-grid"
+    ],
+    "wheres": [
+     "section#univers > div.service-carousel > div.service-carousel-controls > button.service-carousel-control.previous"
+    ]
+   },
+   {
+    "check": "off-grid",
+    "where": "div.steps-grid > article.step:nth-of-type(1) > div.step-top > span.step-number \"01\"",
+    "msg": "left edge at 115px, 15px off the page margin at 100px (16 elements, like p.eyebrow); 2 more in this section off the grid too (h3 at 115px, p at 115px)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-grid"
+    ],
+    "wheres": [
+     "div.steps-grid > article.step:nth-of-type(1) > div.step-top > span.step-number \"01\""
+    ]
+   },
+   {
+    "check": "text-contrast",
+    "where": "div.container.header-inner > a.brand-home > span.brand-lockup.brand-compact > span.brand-cross \"×\"",
+    "msg": "a caption, label or muted line in #9aa5b5 on #ffffff reads 2.49:1 (needs 4.5:1); 2 like it, like \"×\"",
+    "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-contrast"
+    ],
+    "wheres": [
+     "div.container.header-inner > a.brand-home > span.brand-lockup.brand-compact > span.brand-cross \"×\""
+    ]
+   },
+   {
+    "check": "text-contrast",
+    "where": "div.scroll-world-stage > nav.journey-rail > button.journey-brand.massar > small \"Tunisie\"",
+    "msg": "a caption, label or muted line in #657289 on #f0f3f8 reads 4.37:1 (needs 4.5:1); 2 like it, like \"France\"",
+    "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-contrast"
+    ],
+    "wheres": [
+     "div.scroll-world-stage > nav.journey-rail > button.journey-brand.massar > small \"Tunisie\""
+    ]
+   },
+   {
+    "check": "text-contrast",
+    "where": "article.scroll-world-scene:nth-of-type(2) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"Cours\"",
+    "msg": "a caption, label or muted line in #7f8c9b on #ffffff reads 3.42:1 (needs 4.5:1); 3 like it, like \"Quiz\", \"Suivi\"",
+    "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-contrast"
+    ],
+    "wheres": [
+     "article.scroll-world-scene:nth-of-type(2) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"Cours\""
+    ]
+   },
+   {
+    "check": "text-contrast",
+    "where": "article.scroll-world-scene:nth-of-type(3) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"Permis\"",
+    "msg": "a caption, label or muted line in #bac1ca on #ffffff reads 1.81:1 (needs 4.5:1); 3 like it, like \"Engins\", \"Manutention\"",
+    "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-contrast"
+    ],
+    "wheres": [
+     "article.scroll-world-scene:nth-of-type(3) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"Permis\""
+    ]
+   },
+   {
+    "check": "text-contrast",
+    "where": "article.scroll-world-scene:nth-of-type(5) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"SST\"",
+    "msg": "a caption, label or muted line in #a1abb6 on #ffffff reads 2.34:1 (needs 4.5:1); 3 like it, like \"Anglais\", \"Espagnol · Allemand\"",
+    "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-contrast"
+    ],
+    "wheres": [
+     "article.scroll-world-scene:nth-of-type(5) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"SST\""
+    ]
+   },
+   {
+    "check": "text-contrast",
+    "where": "article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"Conduite\"",
+    "msg": "a caption, label or muted line in #dce0e4 on #ffffff reads 1.33:1 (needs 4.5:1); 3 like it, like \"Métiers\", \"Langues\"",
+    "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-contrast"
+    ],
+    "wheres": [
+     "article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"Conduite\""
+    ]
+   },
+   {
+    "check": "text-contrast",
+    "where": "article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > div.scroll-world-actions > a.button.button-green \"Contacter LODENE\"",
+    "msg": "a caption, label or muted line in #2b917e on #007b64 reads 1.36:1 (needs 4.5:1)",
+    "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-contrast"
+    ],
+    "wheres": [
+     "article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > div.scroll-world-actions > a.button.button-green \"Contacter LODENE\""
+    ]
+   },
+   {
+    "check": "text-contrast",
+    "where": "section#univers > div.section-heading > div > p.section-description \"Choisissez votre objectif. Retrouvez les\"",
+    "msg": "body text in #617087 on #ffffff reads 5.03:1 (needs 7:1); 4 like it, like \"Code, conduite, engins\", \"Déjà candidat ou respo\", \"Conduite, engins, VTC,\"",
+    "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-contrast"
+    ],
+    "wheres": [
+     "section#univers > div.section-heading > div > p.section-description \"Choisissez votre objectif. Retrouvez les\""
+    ]
+   },
+   {
+    "check": "text-contrast",
+    "where": "section#collaboration > div.container.collaboration-grid > div.collaboration-copy > p:nth-of-type(2) \"Cette porte d’entrée commune vous aide à\"",
+    "msg": "body text in #617087 on #f5f8fc reads 4.72:1 (needs 7:1)",
+    "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-contrast"
+    ],
+    "wheres": [
+     "section#collaboration > div.container.collaboration-grid > div.collaboration-copy > p:nth-of-type(2) \"Cette porte d’entrée commune vous aide à\""
+    ]
+   },
+   {
+    "check": "effect-kind",
+    "where": "(the page)",
+    "msg": "a service page (--type) moves with the scroll: scroll libraries or timelines (ScrollTrigger, ScrollSmoother): effects fit tech, gaming and software pages and a product with a technical subject, never a place, shop or service page (house rule)",
+    "fix": "take the scroll-driven motion off: on a place, shop or service page the page scrolls plainly and the parts sit still",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "effect-kind"
+    ],
+    "wheres": [
+     "(the page)"
+    ]
+   },
+   {
+    "check": "phone-number",
+    "where": "div.contact-grid > article.contact-card.lodene > div.contact-actions > a.phone-link \"+33 6 60 32 50 87\"",
+    "msg": "a phone number in international format: \"+33 6 60 32 50 87\"; a visitor can dial it and reach a stranger (and 1 more like it: again here)",
+    "fix": "drop the number and its tel: link (a \"Request a call\" form may stand in), unless the brief gives the number",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "phone-number"
+    ],
+    "wheres": [
+     "div.contact-grid > article.contact-card.lodene > div.contact-actions > a.phone-link \"+33 6 60 32 50 87\""
+    ]
+   },
+   {
+    "check": "motion-layer",
+    "where": "html[data-motion]",
+    "msg": "the page marks <html data-motion> but motion.css is not loaded: buttons, links, cards and photos answer nothing on hover",
+    "fix": "link assets/motion/motion.css after cards.css and keep data-motion on <html> (both, or neither)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "motion-layer"
+    ],
+    "wheres": [
+     "html[data-motion]"
+    ]
+   },
+   {
+    "check": "empty-area",
+    "where": "main#main-content > section.scroll-world",
+    "msg": "85% of the section is empty: 5344px above its first content, in its 6300px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "empty-area"
+    ],
+    "wheres": [
+     "main#main-content > section.scroll-world"
+    ]
+   },
+   {
+    "check": "a11y-name",
+    "where": "main#main-content > section.scroll-world:nth-of-type(1) > div.scroll-world-stage > button.scroll-world-hint",
+    "msg": "a button with no accessible name: a screen reader says only \"link\" or \"button\"",
+    "fix": "give the control words: its text, or an aria-label in the page's language for an icon-only button",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "a11y-name"
+    ],
+    "wheres": [
+     "main#main-content > section.scroll-world:nth-of-type(1) > div.scroll-world-stage > button.scroll-world-hint"
+    ]
+   },
+   {
+    "check": "focus-ring",
+    "where": "main:focus",
+    "msg": "\"main:focus\" in 1n_-956c295lt.css removes the focus outline and sets nothing in its place",
+    "fix": "keep the kit's :focus-visible ring, or put a change of the same strength (a 2px line in --action) in the rule that removes it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "focus-ring"
+    ],
+    "wheres": [
+     "main:focus"
+    ]
+   },
+   {
+    "check": "focus-visible",
+    "where": "section#univers > div.universe-toolbar:nth-of-type(2) > div.filter-tabs > button.selected:nth-of-type(1) \"Tous les univers\"",
+    "msg": "Tab stop 19, button \"Tous les univers\": the focus lands on something you cannot see",
+    "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "focus-visible"
+    ],
+    "wheres": [
+     "section#univers > div.universe-toolbar:nth-of-type(2) > div.filter-tabs > button.selected:nth-of-type(1) \"Tous les univers\""
+    ]
+   },
+   {
+    "check": "focus-visible",
+    "where": "section#univers > div.universe-toolbar:nth-of-type(2) > div.filter-tabs > button:nth-of-type(2) \"Conduite\"",
+    "msg": "Tab stop 20, button \"Conduite\": the focus lands on something you cannot see",
+    "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "focus-visible"
+    ],
+    "wheres": [
+     "section#univers > div.universe-toolbar:nth-of-type(2) > div.filter-tabs > button:nth-of-type(2) \"Conduite\""
+    ]
+   },
+   {
+    "check": "focus-visible",
+    "where": "section#univers > div.universe-toolbar:nth-of-type(2) > div.filter-tabs > button:nth-of-type(3) \"Métiers & sécurité\"",
+    "msg": "Tab stop 21, button \"Métiers & sécurité\": the focus lands on something you cannot see",
+    "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "focus-visible"
+    ],
+    "wheres": [
+     "section#univers > div.universe-toolbar:nth-of-type(2) > div.filter-tabs > button:nth-of-type(3) \"Métiers & sécurité\""
+    ]
+   },
+   {
+    "check": "focus-visible",
+    "where": "div.service-carousel-viewport:nth-of-type(1) > ul.service-carousel-track > li.service-carousel-item:nth-of-type(5) > a.service-card.lodene \"Professionnels de la logistique organisa\"",
+    "msg": "Tab stop 27, a \"Professionnels de la logistique organisant les mou\": the focus lands on something you cannot see",
+    "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "focus-visible"
+    ],
+    "wheres": [
+     "div.service-carousel-viewport:nth-of-type(1) > ul.service-carousel-track > li.service-carousel-item:nth-of-type(5) > a.service-card.lodene \"Professionnels de la logistique organisa\""
+    ]
+   },
+   {
+    "check": "moment-none",
+    "where": "(the page)",
+    "msg": "a service page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+    "fix": "deal one (moments.mjs pick --page service --photo) and mount it in its own section",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "moment-none"
+    ],
+    "wheres": [
+     "(the page)"
+    ]
+   },
+   {
+    "check": "hero-screen",
+    "where": "main#main-content > section.scroll-world \"MassarCode et auto-écolesTunisie+LODENEC\"",
+    "msg": "the hero ends at 6387px on a 900px screen, 5487px below the fold: it ends at the fold, 1px either way (SR-1)",
+    "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "hero-screen"
+    ],
+    "wheres": [
+     "main#main-content > section.scroll-world \"MassarCode et auto-écolesTunisie+LODENEC\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "footer.site-footer \"MassarAUTO-ÉCOLE×LODENEFORMATIONLe bon p\"",
+    "msg": "the section is 368px tall (0.4 screens), 532px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "footer.site-footer \"MassarAUTO-ÉCOLE×LODENEFORMATIONLe bon p\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#etapes \"UN CHEMIN SIMPLEDe l’envie au bon interl\"",
+    "msg": "the section is 520px tall (0.6 screens), 380px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "section#etapes \"UN CHEMIN SIMPLEDe l’envie au bon interl\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#collaboration \"DEUX EXPERTISES, UNE MÊME AMBITIONAvance\"",
+    "msg": "the section is 530px tall (0.6 screens), 370px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 2 more like it: \"ON FAIT LE PREMIER PAS ?\", \"À CHAQUE PROJET, SON UNI\") (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "section#collaboration \"DEUX EXPERTISES, UNE MÊME AMBITIONAvance\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#contact \"ON FAIT LE PREMIER PAS ?Votre projet mér\"",
+    "msg": "the section starts at 8274px, 174px below the screen grid (9 x 900px): sections start on whole screens (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "section#contact \"ON FAIT LE PREMIER PAS ?Votre projet mér\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "main#main-content > section.scroll-world \"MassarCode et auto-écolesTunisie+LODENEC\"",
+    "msg": "the section starts at 87px, 87px below the screen grid (0 x 900px): sections start on whole screens (and 3 more like it: \"À CHAQUE PROJET, SON UNI\", \"DEUX EXPERTISES, UNE MÊM\", \"MassarAUTO-ÉCOLE×LODENEF\") (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "main#main-content > section.scroll-world \"MassarCode et auto-écolesTunisie+LODENEC\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#univers > div.service-carousel > div.service-carousel-viewport \"MassarTunisieCODE · QUIZ · SUIVIMassar A\"",
+    "msg": "scroll-snap-type: inline mandatory on \"MassarTunisieCODE · QUIZ · SUIVI\": sections are one or two screens by their height and padding, the scroll is the browser's own (SR-2)",
+    "fix": "take scroll-snap-type off (html, body and every scroller): sections are one or two screens by height and padding, never snapped",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "section#univers > div.service-carousel > div.service-carousel-viewport \"MassarTunisieCODE · QUIZ · SUIVIMassar A\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "div.container > div.section-heading > div > h2 \"Votre projet mérite une vraie conversati\"",
+    "msg": "the screen at scroll 7754px (the top of section 4) shows 380px of section 5 and the heading of section 5 whole and the content of 2 sections, over 24px each beside section 4: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "div.container > div.section-heading > div > h2 \"Votre projet mérite une vraie conversati\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section#etapes > div.section-heading.centered > div > h2 \"De l’envie au bon interlocuteur.\"",
+    "msg": "the screen at scroll 7224px (the top of section 3) shows 370px of section 4 and the heading of section 4 whole and the content of 2 sections, over 24px each beside section 3: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "section#etapes > div.section-heading.centered > div > h2 \"De l’envie au bon interlocuteur.\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "main#main-content > section.scroll-world > div.scroll-world-stage > nav.journey-rail \"MassarCode et auto-écolesTunisie+LODENEC\"",
+    "msg": "a band: a box 100% of the section wide on a ground of its own that holds only text: the section's own ground is the band (SR-4)",
+    "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "main#main-content > section.scroll-world > div.scroll-world-stage > nav.journey-rail \"MassarCode et auto-écolesTunisie+LODENEC\""
+    ]
+   },
+   {
+    "check": "one-heading",
+    "where": "section#etapes > div.section-heading.centered > div > h2 \"De l’envie au bon interlocuteur.\"",
+    "msg": "headings of two sections show whole on one screen at 9 of 170 scroll positions (5.3%; at scroll 7050, 7100, 7150, 7200px), here with \"Avancer ensemble, chacun avec so\": at most 3% on a desktop (SR-5)",
+    "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-heading"
+    ],
+    "wheres": [
+     "section#etapes > div.section-heading.centered > div > h2 \"De l’envie au bon interlocuteur.\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "main#main-content > section.scroll-world \"MassarCode et auto-écolesTunisie+LODENEC\"",
+    "msg": "the content of section 1 runs 100px from the left and 58px from the right (read from its outermost blocks: no .wrap): 100 and 58px are not one margin (one container, equal margins, 2px either way) (SR-6)",
+    "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "main#main-content > section.scroll-world \"MassarCode et auto-écolesTunisie+LODENEC\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "section#univers \"À CHAQUE PROJET, SON UNIVERSVous voulez \"",
+    "msg": "the content of section 2 runs 95px from the left and 95px from the right (read from its outermost blocks: no .wrap): the page's container starts at 100px (one container, equal margins, 2px either way) (SR-6)",
+    "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "section#univers \"À CHAQUE PROJET, SON UNIVERSVous voulez \""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "a.skip-link \"Aller au contenu\"",
+    "msg": "a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "a.skip-link \"Aller au contenu\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "header.site-header \"MassarAUTO-ÉCOLE×LODENEFORMATIONNos univ\"",
+    "msg": "a <header> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (and 7 more like it: \"MassarAUTO-ÉCOLE×LODENEF\", \"MassarCode et auto-école\", \"À CHAQUE PROJET, SON UNI\") (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "header.site-header \"MassarAUTO-ÉCOLE×LODENEFORMATIONNos univ\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "section#univers > div.service-carousel > div.service-carousel-controls > button.service-carousel-control.previous \"Voir le parcours précédent\"",
+    "msg": "\"Voir le parcours précédent\" runs 77-123px, outside the container lines of section 2 at 95-1345px: full width is for background layers and grounds only (and 18 more like it: \"Voir le parcours suivant\", \"Voir le parcours précéde\", \"Voir le parcours suivant\") (SR-6)",
+    "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "section#univers > div.service-carousel > div.service-carousel-controls > button.service-carousel-control.previous \"Voir le parcours précédent\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "section#collaboration > div.container.collaboration-grid > div.collaboration-partners > p.partner-note \"Votre parcours se poursuit dans l’espace\"",
+    "msg": "1 text block starts on a left line at x 865, 765px from the container's left: text starts on the container's left, or on one split line (x 627, 732, 837) (and 6 more like it: x 651, x 429, \"De l’envie au bon interl\") (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "section#collaboration > div.container.collaboration-grid > div.collaboration-partners > p.partner-note \"Votre parcours se poursuit dans l’espace\""
+    ]
+   },
+   {
+    "check": "row-lines",
+    "where": "section#univers > div.service-carousel > div.service-carousel-viewport > ul.service-carousel-track \"MassarTunisieCODE · QUIZ · SUIVIMassar A\"",
+    "msg": "a row of 6 items: its last item ends at 2600px, the container's right line at 1345px (2px either way) (SR-7)",
+    "fix": "start the row's first item on the container's left line and end its last on the right line, every item one height",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "row-lines"
+    ],
+    "wheres": [
+     "section#univers > div.service-carousel > div.service-carousel-viewport > ul.service-carousel-track \"MassarTunisieCODE · QUIZ · SUIVIMassar A\""
+    ]
+   },
+   {
+    "check": "row-lines",
+    "where": "section#univers > div.service-carousel > div.service-carousel-viewport \"MassarTunisieCODE · QUIZ · SUIVIMassar A\"",
+    "msg": "a sideways scroller: 1260px of it hidden behind overflow-x: auto (SR-7)",
+    "fix": "show every item inside the container, or stack them: no sideways scroller, no half-cut carousel",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "row-lines"
+    ],
+    "wheres": [
+     "section#univers > div.service-carousel > div.service-carousel-viewport \"MassarTunisieCODE · QUIZ · SUIVIMassar A\""
+    ]
+   },
+   {
+    "check": "row-lines",
+    "where": "section#univers > div.service-carousel > div.service-carousel-controls > button.service-carousel-control.next \"Voir le parcours suivant\"",
+    "msg": "\"Voir le parcours suivant\" ends at 1363px, past the container's right line at 1345px (SR-7)",
+    "fix": "end it at the container's right line",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "row-lines"
+    ],
+    "wheres": [
+     "section#univers > div.service-carousel > div.service-carousel-controls > button.service-carousel-control.next \"Voir le parcours suivant\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#collaboration > div.container.collaboration-grid \"DEUX EXPERTISES, UNE MÊME AMBITIONAvance\"",
+    "msg": "the two columns of the split start 19px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+    "fix": "top-align both columns of the split (align-items: start)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#collaboration > div.container.collaboration-grid \"DEUX EXPERTISES, UNE MÊME AMBITIONAvance\""
+    ]
+   },
+   {
+    "check": "empty-visual",
+    "where": "li.service-carousel-item:nth-of-type(4) > a.service-card.lodene > div.service-card-image.image-sst > img \"sst.webp\"",
+    "msg": "the picture sst.webp never loaded: its frame shows empty",
+    "fix": "make the visual draw at every width: a picture that loads, an effect that renders, or its still fallback; never an empty frame",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "empty-visual"
+    ],
+    "wheres": [
+     "li.service-carousel-item:nth-of-type(4) > a.service-card.lodene > div.service-card-image.image-sst > img \"sst.webp\""
+    ]
+   },
+   {
+    "check": "empty-visual",
+    "where": "li.service-carousel-item:nth-of-type(5) > a.service-card.lodene > div.service-card-image.image-logistique > img \"logistics.jpg\"",
+    "msg": "the picture logistics.jpg never loaded: its frame shows empty",
+    "fix": "make the visual draw at every width: a picture that loads, an effect that renders, or its still fallback; never an empty frame",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "empty-visual"
+    ],
+    "wheres": [
+     "li.service-carousel-item:nth-of-type(5) > a.service-card.lodene > div.service-card-image.image-logistique > img \"logistics.jpg\""
+    ]
+   },
+   {
+    "check": "overlap-text",
+    "where": "div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-scrim",
+    "msg": "lies over the text \"01 / 06\" (div.scroll-world-copy.container > p.scroll-world-count) (and 5 more like it: div.scroll-world-scrim, div.scroll-world-scrim, div.scroll-world-scrim, div.scroll-world-scrim, ...)",
+    "fix": "move the box off the text (or the text off the box)",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "overlap-text"
+    ],
+    "wheres": [
+     "div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-scrim"
+    ]
+   },
+   {
+    "check": "tap-size",
+    "where": "div.container.header-inner > div.header-actions > div.language-switch > button.active \"FR Français\"",
+    "msg": "a 25x27px tap target: 0px from the next one (\"ع العربية\"), so a thumb lands on the wrong one",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "tap-size"
+    ],
+    "wheres": [
+     "div.container.header-inner > div.header-actions > div.language-switch > button.active \"FR Français\""
+    ]
+   },
+   {
+    "check": "tap-size",
+    "where": "div.container.header-inner > div.header-actions > div.language-switch > button:nth-of-type(2) \"ع العربية\"",
+    "msg": "a 25x27px tap target: 0px from the next one (\"FR Français\"), so a thumb lands on the wrong one",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "tap-size"
+    ],
+    "wheres": [
+     "div.container.header-inner > div.header-actions > div.language-switch > button:nth-of-type(2) \"ع العربية\""
+    ]
+   },
+   {
+    "check": "scroll-reveal",
+    "where": "div.service-carousel-viewport > ul.service-carousel-track > li.service-carousel-item:nth-of-type(1) > a.service-card.massar \"Massar Tunisie CODE · QUIZ · SUIVI Massa\"",
+    "msg": "starts \"-webkit-text-fill-color\" (0.2 s) the moment it is scrolled into view (an IntersectionObserver) on span.card-open",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "scroll-reveal"
+    ],
+    "wheres": [
+     "div.service-carousel-viewport > ul.service-carousel-track > li.service-carousel-item:nth-of-type(1) > a.service-card.massar \"Massar Tunisie CODE · QUIZ · SUIVI Massa\""
+    ]
+   },
+   {
+    "check": "heading-scale",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(2) > div.scroll-world-copy.container > h2 \"Apprenez le code avec Massar.\"",
+    "msg": "an h2 at 39px, as large as the h1 (39px) or larger (and 2 more like it: \"Prenez les commandes.\", \"Faites de la mobilité un\")",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "heading-scale"
+    ],
+    "wheres": [
+     "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(2) > div.scroll-world-copy.container > h2 \"Apprenez le code avec Massar.\""
+    ]
+   },
+   {
+    "check": "contrast",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > p.scroll-world-count \"01 / 06\"",
+    "msg": "body text over a effect reads at 2.2:1 at its worst tenth (needs 4.5:1) (and 5 more like it: \"02 / 06\", \"Apprentissage numérique\", \"03 / 06\", \"Formation pratique\", ...)",
+    "fix": "put the text on a calm part of the picture, or on a solid panel",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "contrast"
+    ],
+    "wheres": [
+     "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > p.scroll-world-count \"01 / 06\""
+    ]
+   },
+   {
+    "check": "contrast",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > p.scroll-world-eyebrow \"Six univers de formation\"",
+    "msg": "body text over a effect reads at 2.9:1 at its worst tenth (needs 4.5:1), on a busy ground (and 5 more like it: \"04 / 06\", \"Métiers de la mobilité\", \"Compétences complémentai\", \"06 / 06\", ...)",
+    "fix": "put the text on a calm part of the picture, or on a solid panel",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "contrast"
+    ],
+    "wheres": [
+     "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > p.scroll-world-eyebrow \"Six univers de formation\""
+    ]
+   },
+   {
+    "check": "fold-action",
+    "where": "article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > div.scroll-world-actions > a.button.button-green",
+    "msg": "the hero's main button \"Contacter LODENE\" starts 3819px below the first screen (844px tall): it is not seen on load",
+    "fix": "bring the hero's buttons onto the first screen: a shorter headline or line, the picture under the buttons",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "fold-action"
+    ],
+    "wheres": [
+     "article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > div.scroll-world-actions > a.button.button-green"
+    ]
+   },
+   {
+    "check": "tap-size",
+    "where": "section#collaboration > div.container.collaboration-grid > div.collaboration-copy > a.text-link \"Trouver mon univers\"",
+    "msg": "a 159x22px tap target: 0px from the next one (\"Massar AUTO-ÉCOLE × LODE\"), so a thumb lands on the wrong one",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "tap-size"
+    ],
+    "wheres": [
+     "section#collaboration > div.container.collaboration-grid > div.collaboration-copy > a.text-link \"Trouver mon univers\""
+    ]
+   },
+   {
+    "check": "tap-size",
+    "where": "section#etapes > a.text-link.steps-link \"Explorer nos univers\"",
+    "msg": "a 159x32px tap target: 0px from the next one (\"Massar AUTO-ÉCOLE × LODE\"), so a thumb lands on the wrong one",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "tap-size"
+    ],
+    "wheres": [
+     "section#etapes > a.text-link.steps-link \"Explorer nos univers\""
+    ]
+   },
+   {
+    "check": "tap-size",
+    "where": "div.contact-grid > article.contact-card.massar > div.contact-actions > a.text-link \"Espace auto-école — S’ouvre dans un nouv\"",
+    "msg": "a 145x22px tap target: 0px from the next one (\"Massar AUTO-ÉCOLE × LODE\"), so a thumb lands on the wrong one",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "tap-size"
+    ],
+    "wheres": [
+     "div.contact-grid > article.contact-card.massar > div.contact-actions > a.text-link \"Espace auto-école — S’ouvre dans un nouv\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "nav",
+    "where": "header.site-header > div.container.header-inner > a.brand-home \"Massar AUTO-ÉCOLE × LODENE FORMATION\"",
+    "msg": "the nav is lopsided: its first item starts 7px inside the content's edge (100px), while its last ends on the other edge",
+    "fix": "start the nav's first item and end its last on the content's two edges",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "spill",
+    "where": "main#main-content > section.scroll-world > div.scroll-world-stage > nav.journey-rail \"Massar Code et auto-écoles Tunisie + LOD\"",
+    "msg": "runs 480px past the right edge of the panel it sits on (div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-scrim) (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "spill",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(2) > div.scroll-world-media > img \"img: Diorama d’un candidat qui apprend l\"",
+    "msg": "runs 480px past the right edge of the panel it sits on (div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-scrim) (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "spill",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(3) > div.scroll-world-media > img \"img: Diorama d’un centre d’apprentissage\"",
+    "msg": "runs 480px past the right edge of the panel it sits on (div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(2) > div.scroll-world-scrim) (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "spill",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(4) > div.scroll-world-media > img \"img: Diorama réunissant transport de per\"",
+    "msg": "runs 480px past the right edge of the panel it sits on (div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(3) > div.scroll-world-scrim) (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "spill",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(5) > div.scroll-world-media > img \"img: Diorama de deux ateliers consacrés \"",
+    "msg": "runs 480px past the right edge of the panel it sits on (div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(4) > div.scroll-world-scrim) (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "spill",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(6) > div.scroll-world-media > img \"img: Diorama de l’entrée d’un centre de \"",
+    "msg": "runs 480px past the right edge of the panel it sits on (div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(5) > div.scroll-world-scrim) (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "overlap-text",
+    "where": "div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-scrim",
+    "msg": "lies over the text \"01 / 06\" (div.scroll-world-copy.container > p.scroll-world-count) (inside a held section or scroll scene, whose motion --quick does not check) (and 3 more like it: div.scroll-world-scrim, div.scroll-world-scrim, div.scroll-world-scrim)",
+    "fix": "move the box off the text (or the text off the box)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "button-styles",
+    "where": "section.scroll-world > div.scroll-world-stage > div.journey-chapter-nav > button:nth-of-type(2) \"Code Massar\"",
+    "msg": "one button style (soft, fill #ffffff, outline #dfe6ef) with labels in 2 sizes: 12, 16px (\"Code Massar\", \"Votre cap\") (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-headings",
+    "where": "li.service-carousel-item:nth-of-type(4) > a.service-card.lodene > div.service-card-body > h3 \"Secourisme & SST\"",
+    "msg": "the card title \"Secourisme & SST\" names no product, part, place or section (4 card titles like it) (and 3 more like it: \"Logistique & transport\", \"La route commence par le\", \"Se former avec LODENE\")",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-buttons",
+    "where": "header.site-header > div.container.header-inner > div.header-actions > button.access-button \"Mon espace\"",
+    "msg": "\"Mon espace\" does not start with a verb (book, buy, try, start, get, see...) (and 7 more like it: \"Massar Code et auto-écol\", \"Votre cap\", \"Code Massar\", \"VTC et logistique\", ...)",
+    "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-buttons",
+    "where": "section.scroll-world > div.scroll-world-stage > nav.journey-rail > button.journey-brand.massar \"Massar Code et auto-écoles Tunisie\"",
+    "msg": "\"Massar Code et auto-écoles Tunisie\" is 6 words (1 to 5)",
+    "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-actions",
+    "where": "(the page)",
+    "msg": "the main action \"Contacter LODENE\" does not read word for word the same in the nav or hero and the closing section",
+    "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "contrast",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > p.scroll-world-count \"01 / 06\"",
+    "msg": "body text over a effect reads at 4.3:1 at its worst tenth (needs 4.5:1) (inside a held section or scroll scene, whose motion --quick does not check) (and 6 more like it: \"Six univers de formation\", \"02 / 06\", \"03 / 06\", \"04 / 06\", ...)",
+    "fix": "put the text on a calm part of the picture, or on a solid panel",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "contrast",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > p.scroll-world-body \"De la première règle du code à la maîtri\"",
+    "msg": "body text over a effect reads at 3.8:1 at its worst tenth (needs 4.5:1), on a busy ground (inside a held section or scroll scene, whose motion --quick does not check) (and 3 more like it: \"Retrouvez vos cours, ent\", \"Permis automobile, tract\", \"Préparez un projet VTC o\")",
+    "fix": "put the text on a calm part of the picture, or on a solid panel",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "body-size",
+    "where": "section#etapes > div.steps-grid > article.step:nth-of-type(1) > p \"Code, conduite, engins, métier ou langue\"",
+    "msg": "4 of 5 paragraphs of running text are set under 16px (13.9, 14.1, 15px)",
+    "fix": "set running text at 16px or more",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "busy-ground",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > h1 \"Code, conduite et formations professionn\"",
+    "msg": "text over a busy part of a effect (its luminance varies by 0.12 under the words) (inside a held section or scroll scene, whose motion --quick does not check) (and 1 more like it: \"Apprenez le code avec Ma\")",
+    "fix": "move the text to a calm part of the picture, or put it on a panel",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#main-content > section.scroll-world / section#univers",
+    "msg": "91px between these sections, -49% against the median 177px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-set",
+    "where": "li.service-carousel-item:nth-of-type(3) > a.service-card.lodene > div.service-card-image.image-vtc > img \"vtc.webp\"",
+    "msg": "8 photographs in more than one look: lightness from 0.41 to 0.84; the odd one out is vtc.webp",
+    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-family",
+    "where": "header.site-header",
+    "msg": "the nav's links and actions use 2 type families (Outfit, Tajawal)",
+    "fix": "keep one nav on every screen: the same bar, fill, links and type",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "heading-align",
+    "where": "section#etapes > div.section-heading.centered > div > h2 \"De l’envie au bon interlocuteur.\"",
+    "msg": "3 section headings sit on the left, 1 centred: \"De l’envie au bon interl\"",
+    "fix": "set every section heading in one place: all on the left grid, or all centred",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "label-centre",
+    "where": "section.scroll-world > div.scroll-world-stage > nav.journey-rail > button.journey-brand.massar \"Massar Code et auto-écoles Tunisie\"",
+    "msg": "its label sits 136px off-centre (10px of room at the left, 146px at the right) (inside a held section or scroll scene, whose motion --quick does not check) (and 1 more like it: \"LODENE Centre de formati\")",
+    "fix": "centre the label in its button, or fill the empty side with an icon",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "label-centre",
+    "where": "section.scroll-world > div.scroll-world-stage > div.journey-chapter-nav > button:nth-of-type(1) \"Votre cap\"",
+    "msg": "its label sits 72px off-centre (-59px of room at the left, 13px at the right) (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "centre the label in its button, or fill the empty side with an icon",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "button-contrast",
+    "where": "section.scroll-world > div.scroll-world-stage > nav.journey-rail > button.journey-brand.massar \"Massar Code et auto-écoles Tunisie\"",
+    "msg": "the button \"Massar Code et auto-écoles Tun\" (#f5f8fc) stands only 1.04:1 off the ground around it: it reads as part of the ground, or as switched off (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "give the button a fill that stands at least 1.5:1 off what is around it, or an outline in the ink",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "button-contrast",
+    "where": "section.scroll-world > div.scroll-world-stage > nav.journey-rail > button.journey-brand.lodene \"LODENE Centre de formation France\"",
+    "msg": "the button \"LODENE Centre de formation Fra\" (#f5f8fc) stands only 1.03:1 off the ground around it: it reads as part of the ground, or as switched off (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "give the button a fill that stands at least 1.5:1 off what is around it, or an outline in the ink",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "one-screen",
+    "where": "section#collaboration \"Avancer ensemble, chacun avec son savoir\"",
+    "msg": "3 sections are shorter than the screen, so the next one's heading or picture shows with them: \"Avancer ensemble, chacun avec son savoir\" is 530px of the 813px under the nav, and \"De l’envie au bon interlocuteu\" shows below it (\"De l’envie au bon in\", \"Votre projet mérite \")",
+    "fix": "give each section the screen (min-height: 100svh less the nav, its content centred), or join two short ones into one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "font-load",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > h1 \"Outfit\"",
+    "msg": "\"Outfit\" is asked for by the h1, the h2s and the body text but never loaded (no font link or @font-face loads it): it shows in its fallback",
+    "fix": "load every family the type asks for: name it in the font link as start.mjs prints it, spelt as Google Fonts spells it, or ask for a family the page loads",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-tile",
+    "where": "section#univers \"Vous voulez aller où ?\"",
+    "msg": "the section is 837px tall (0.93 screens at 1440x900), shorter than the screen: its tile (the screen from its top) shows 750px of it and only 63px of the next section's ground (\"Avancer ensemble, chacun avec \"), none of its content",
+    "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "container-edges",
+    "where": "main#main-content > section.scroll-world > div.scroll-world-stage \"MassarCode et auto-écolesTunisie+LODENEC\"",
+    "msg": "a box over half the container wide runs 0-1440px, not on the container's lines at 100-1382px (it sits in a part held on screen as the page scrolls: told as a WARN) (SR-6)",
+    "fix": "run the picture or box from the container's left line to its right line, or put it in a row or a split",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "row-lines",
+    "where": "section.scroll-world > div.scroll-world-stage > div.journey-chapter-nav > button:nth-of-type(1) \"Votre cap\"",
+    "msg": "\"Votre cap\" ends at 1416px, past the container's right line at 1382px (it sits in a part held on screen as the page scrolls: told as a WARN) (SR-7)",
+    "fix": "end it at the container's right line",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "row-lines",
+    "where": "section.scroll-world > div.scroll-world-stage > div.journey-chapter-nav > button:nth-of-type(2) \"Code Massar\"",
+    "msg": "\"Code Massar\" ends at 1416px, past the container's right line at 1382px (it sits in a part held on screen as the page scrolls: told as a WARN) (and 4 more like it: \"Conduite et engins\", \"VTC et logistique\", \"SST et langues\") (SR-7)",
+    "fix": "end it at the container's right line",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "header.site-header > div.container.header-inner > a.brand-home \"Massar AUTO-ÉCOLE × LODENE FORMATION\"",
+    "msg": "a 194x30px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "header.site-header > div.container.header-inner > div.header-actions > button.mobile-toggle",
+    "msg": "a 34x34px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > div.scroll-world-actions > a.hero-secondary \"Voir tous les univers\"",
+    "msg": "a 352x14px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "section#univers > div.universe-toolbar > div.filter-tabs > button.selected \"Tous les univers\"",
+    "msg": "a 97x35px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "section#univers > div.universe-toolbar > div.filter-tabs > button:nth-of-type(2) \"Conduite\"",
+    "msg": "a 64x35px tap target (and 2 more like it on this screen): under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "section#collaboration > div.container.collaboration-grid > div.collaboration-copy > a.text-link \"Trouver mon univers\"",
+    "msg": "a 159x22px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "section#etapes > a.text-link.steps-link \"Explorer nos univers\"",
+    "msg": "a 159x32px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "div.contact-grid > article.contact-card.massar > div.contact-actions > a.text-link \"Espace auto-école — S’ouvre dans un nouv\"",
+    "msg": "a 145x22px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "div.contact-grid > article.contact-card.lodene > div.contact-actions > a.phone-link \"+33 6 60 32 50 87\"",
+    "msg": "a 127x17px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "div:nth-of-type(2) > ul > li:nth-of-type(1) > a \"Massar Auto-école\"",
+    "msg": "a 98x18px tap target (and 8 more like it on this screen): under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "div:nth-of-type(3) > ul > li:nth-of-type(2) > a \"Espace apprenant LODENE — S’ouvre dans u\"",
+    "msg": "a 166x36px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "footer.site-footer > div.container > div.footer-bottom > a \"Retour en haut\"",
+    "msg": "a 83x15px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "heading-scale",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(2) > div.scroll-world-copy.container > h2 \"Apprenez le code avec Massar.\"",
+    "msg": "h2 headings in 3 sizes, 31.2px (\"Vous voulez aller où ?\") to 39px (x1.25)",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "heading-scale",
+    "where": "li.service-carousel-item:nth-of-type(1) > a.service-card.massar > div.service-card-body > h3 \"Massar Auto-école\"",
+    "msg": "h3 headings in 3 sizes, 18.7px (\"Choisissez votre univers\") to 22.4px (x1.20)",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "busy-ground",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > h2 \"Choisissez votre prochaine formation.\"",
+    "msg": "text over a busy part of a effect (its luminance varies by 0.16 under the words)",
+    "fix": "move the text to a calm part of the picture, or put it on a panel",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "label-centre",
+    "where": "section.scroll-world > div.scroll-world-stage > nav.journey-rail > button.journey-brand.massar \"Massar\"",
+    "msg": "its label sits 51px off-centre (5px of room at the left, 56px at the right) (and 1 more like it: \"LODENE\")",
+    "fix": "centre the label in its button, or fill the empty side with an icon",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-weight",
+    "where": "li.service-carousel-item:nth-of-type(2) > a.service-card.lodene > div.service-card-image.image-conduite > img \"backhoe.png\"",
+    "msg": "7 photographs are 3x or more wider than drawn on the phone, with no srcset: backhoe.png is 1536px (2975 KB, lazy) for a 350px frame; on a phone it arrives late and its frame shows only its ground until then",
+    "fix": "give each photograph srcset and sizes (a 800px and a 1600px file), or a smaller file: the frame never shows empty",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "button-contrast",
+    "where": "section.scroll-world > div.scroll-world-stage > nav.journey-rail > button.journey-brand.massar \"Massar\"",
+    "msg": "the button \"Massar\" (#f5f8fc) stands only 1.03:1 off the ground around it: it reads as part of the ground, or as switched off",
+    "fix": "give the button a fill that stands at least 1.5:1 off what is around it, or an outline in the ink",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "button-contrast",
+    "where": "section.scroll-world > div.scroll-world-stage > nav.journey-rail > button.journey-brand.lodene \"LODENE\"",
+    "msg": "the button \"LODENE\" (#f5f8fc) stands only 1.05:1 off the ground around it: it reads as part of the ground, or as switched off",
+    "fix": "give the button a fill that stands at least 1.5:1 off what is around it, or an outline in the ink",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-caption",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > p.scroll-world-eyebrow \"Six univers de formation\"",
+    "msg": "a small 12px line is laid over the lower half of the picture cap.webp: \"Six univers de formation\"; no caption or description under any image, render or visual (house rule)",
+    "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-caption",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(2) > div.scroll-world-copy.container > p.scroll-world-body \"Retrouvez vos cours, entraînez-vous avec\"",
+    "msg": "a small 15px line is laid over the lower half of the picture massar.webp: \"Retrouvez vos cours, entraînez-vous avec...\"; no caption or description under any image, render or visual (house rule)",
+    "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-caption",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(4) > div.scroll-world-copy.container > p.scroll-world-eyebrow \"Métiers de la mobilité\"",
+    "msg": "a small 12px line is laid over the lower half of the picture mobilite.webp: \"Métiers de la mobilité\"; no caption or description under any image, render or visual (house rule)",
+    "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fold-cut",
+    "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > p.scroll-world-body \"De la première règle du code à la maîtri\"",
+    "msg": "a line of the hero text is sliced by the bottom of the first screen",
+    "fix": "size the hero so the heading ends above the fold, or starts below it",
+    "widths": [
+     320
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [
+   "copy-lint.mjs could not run (exit 0: spawnSync /home/iyed/.nvm/versions/node/v24.18.0/bin/node EPERM)",
+   "consistency.mjs could not walk every width",
+   "check.mjs could not run (exit 2)"
+  ],
+  "seconds": {
+   "consistency": 0,
+   "layout": 0
+  }
+ },
+ "open": [
+  {
+   "check": "empty-visual",
+   "where": "li.service-carousel-item:nth-of-type(6) > a.service-card.lodene > div.service-card-image.image-langues > img \"language-workshop.png\"",
+   "msg": "the picture language-workshop.png never loaded: its frame shows empty",
+   "fix": "make the visual draw at every width: a picture that loads, an effect that renders, or its still fallback; never an empty frame",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "empty-visual"
+   ],
+   "wheres": [
+    "li.service-carousel-item:nth-of-type(6) > a.service-card.lodene > div.service-card-image.image-langues > img \"language-workshop.png\""
+   ]
+  },
+  {
+   "check": "flush",
+   "where": "div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(6) > div.scroll-world-scrim",
+   "msg": "its last line sits 0px above the lower edge of section.scroll-world, where the ground changes to section#univers",
+   "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "flush"
+   ],
+   "wheres": [
+    "div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(6) > div.scroll-world-scrim"
+   ]
+  },
+  {
+   "check": "nav",
+   "where": "header.site-header > div.container.header-inner > a.brand-home \"Massar AUTO-ÉCOLE × LODENE FORMATION\"",
+   "msg": "nav link wraps to a second line",
+   "fix": "make the nav one bar from the content's left edge to its right edge, with every link and action inside it",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "nav"
+   ],
+   "wheres": [
+    "header.site-header > div.container.header-inner > a.brand-home \"Massar AUTO-ÉCOLE × LODENE FORMATION\""
+   ]
+  },
+  {
+   "check": "pinned",
+   "where": "main#main-content > section.scroll-world > div.scroll-world-stage \"Massar Code et auto-écoles Tunisie + LOD\"",
+   "msg": "held on screen for 6 screens of scroll (position: sticky) while the page moves on",
+   "fix": "let the section scroll with the page",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "pinned"
+   ],
+   "wheres": [
+    "main#main-content > section.scroll-world > div.scroll-world-stage \"Massar Code et auto-écoles Tunisie + LOD\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#collaboration \"Avancer ensemble, chacun avec son savoir\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#collaboration \"Avancer ensemble, chacun avec son savoir\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#etapes \"De l’envie au bon interlocuteur.\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#etapes \"De l’envie au bon interlocuteur.\""
+   ]
+  },
+  {
+   "check": "button-styles",
+   "where": "(one screen)",
+   "msg": "3 button styles on one screen: soft, fill #ffffff, outline #dfe6ef (\"Votre cap\"); soft, fill #f5f8fc (\"Massar Code et auto-écoles Tunisie\"); soft, outline #dce4ec (\"Mon espace\"); the odd one out: \"Mon espace\"",
+   "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "button-styles"
+   ],
+   "wheres": [
+    "(one screen)"
+   ]
+  },
+  {
+   "check": "button-styles",
+   "where": "(the page)",
+   "msg": "4 button styles on the page: soft, outline #dce4ec x1 (\"Mon espace\"); soft, fill #f5f8fc x2 (\"Massar Code et auto-écoles Tunisie\"); soft, fill #ffffff, outline #dfe6ef x6 (\"Votre cap\"); soft, fill #007b64 x2 (\"Contacter LODENE\")",
+   "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "button-styles"
+   ],
+   "wheres": [
+    "(the page)"
+   ]
+  },
+  {
+   "check": "copy-headings",
+   "where": "section#univers > div.section-heading > div > h2 \"Vous voulez aller où ?\"",
+   "msg": "\"Vous voulez aller où ?\" names no product, part, place or section (4 headings like it; at most one brand line per page) (and 3 more like it: \"Avancer ensemble, chacun\", \"De l’envie au bon interl\", \"Faites le premier pas\")",
+   "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headings"
+   ],
+   "wheres": [
+    "section#univers > div.section-heading > div > h2 \"Vous voulez aller où ?\""
+   ]
+  },
+  {
+   "check": "copy-actions",
+   "where": "section.scroll-world > div.scroll-world-stage > div.journey-chapter-nav > button:nth-of-type(3) \"Conduite et engins\"",
+   "msg": "6 actions in the hero (\"Votre cap\", \"Code Massar\", \"Conduite et engins\", \"VTC et logistique\", \"SST et langues\", \"Votre prochaine étape\"); at most 2",
+   "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-actions"
+   ],
+   "wheres": [
+    "section.scroll-world > div.scroll-world-stage > div.journey-chapter-nav > button:nth-of-type(3) \"Conduite et engins\""
+   ]
+  },
+  {
+   "check": "top-stagger",
+   "where": "section#collaboration > div.container.collaboration-grid > div.collaboration-partners \"Massar AUTO-ÉCOLE La route commence par \"",
+   "msg": "2 boxes side by side start at different heights (+0, +27px)",
+   "fix": "align the tops of the boxes in the row (one floor, one ceiling)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "top-stagger"
+   ],
+   "wheres": [
+    "section#collaboration > div.container.collaboration-grid > div.collaboration-partners \"Massar AUTO-ÉCOLE La route commence par \""
+   ]
+  },
+  {
+   "check": "off-grid",
+   "where": "section#univers > div.service-carousel > div.service-carousel-controls > button.service-carousel-control.previous",
+   "msg": "left edge at 77px, 23px off the page margin at 100px (16 elements, like button.selected)",
+   "fix": "move it onto the page margin, or the column edge its section uses",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-grid"
+   ],
+   "wheres": [
+    "section#univers > div.service-carousel > div.service-carousel-controls > button.service-carousel-control.previous"
+   ]
+  },
+  {
+   "check": "off-grid",
+   "where": "div.steps-grid > article.step:nth-of-type(1) > div.step-top > span.step-number \"01\"",
+   "msg": "left edge at 115px, 15px off the page margin at 100px (16 elements, like p.eyebrow); 2 more in this section off the grid too (h3 at 115px, p at 115px)",
+   "fix": "move it onto the page margin, or the column edge its section uses",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-grid"
+   ],
+   "wheres": [
+    "div.steps-grid > article.step:nth-of-type(1) > div.step-top > span.step-number \"01\""
+   ]
+  },
+  {
+   "check": "text-contrast",
+   "where": "div.container.header-inner > a.brand-home > span.brand-lockup.brand-compact > span.brand-cross \"×\"",
+   "msg": "a caption, label or muted line in #9aa5b5 on #ffffff reads 2.49:1 (needs 4.5:1); 2 like it, like \"×\"",
+   "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-contrast"
+   ],
+   "wheres": [
+    "div.container.header-inner > a.brand-home > span.brand-lockup.brand-compact > span.brand-cross \"×\""
+   ]
+  },
+  {
+   "check": "text-contrast",
+   "where": "div.scroll-world-stage > nav.journey-rail > button.journey-brand.massar > small \"Tunisie\"",
+   "msg": "a caption, label or muted line in #657289 on #f0f3f8 reads 4.37:1 (needs 4.5:1); 2 like it, like \"France\"",
+   "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-contrast"
+   ],
+   "wheres": [
+    "div.scroll-world-stage > nav.journey-rail > button.journey-brand.massar > small \"Tunisie\""
+   ]
+  },
+  {
+   "check": "text-contrast",
+   "where": "article.scroll-world-scene:nth-of-type(2) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"Cours\"",
+   "msg": "a caption, label or muted line in #7f8c9b on #ffffff reads 3.42:1 (needs 4.5:1); 3 like it, like \"Quiz\", \"Suivi\"",
+   "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-contrast"
+   ],
+   "wheres": [
+    "article.scroll-world-scene:nth-of-type(2) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"Cours\""
+   ]
+  },
+  {
+   "check": "text-contrast",
+   "where": "article.scroll-world-scene:nth-of-type(3) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"Permis\"",
+   "msg": "a caption, label or muted line in #bac1ca on #ffffff reads 1.81:1 (needs 4.5:1); 3 like it, like \"Engins\", \"Manutention\"",
+   "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-contrast"
+   ],
+   "wheres": [
+    "article.scroll-world-scene:nth-of-type(3) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"Permis\""
+   ]
+  },
+  {
+   "check": "text-contrast",
+   "where": "article.scroll-world-scene:nth-of-type(5) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"SST\"",
+   "msg": "a caption, label or muted line in #a1abb6 on #ffffff reads 2.34:1 (needs 4.5:1); 3 like it, like \"Anglais\", \"Espagnol · Allemand\"",
+   "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-contrast"
+   ],
+   "wheres": [
+    "article.scroll-world-scene:nth-of-type(5) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"SST\""
+   ]
+  },
+  {
+   "check": "text-contrast",
+   "where": "article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"Conduite\"",
+   "msg": "a caption, label or muted line in #dce0e4 on #ffffff reads 1.33:1 (needs 4.5:1); 3 like it, like \"Métiers\", \"Langues\"",
+   "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-contrast"
+   ],
+   "wheres": [
+    "article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > ul.scroll-world-tags > li:nth-of-type(1) \"Conduite\""
+   ]
+  },
+  {
+   "check": "text-contrast",
+   "where": "article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > div.scroll-world-actions > a.button.button-green \"Contacter LODENE\"",
+   "msg": "a caption, label or muted line in #2b917e on #007b64 reads 1.36:1 (needs 4.5:1)",
+   "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-contrast"
+   ],
+   "wheres": [
+    "article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > div.scroll-world-actions > a.button.button-green \"Contacter LODENE\""
+   ]
+  },
+  {
+   "check": "text-contrast",
+   "where": "section#univers > div.section-heading > div > p.section-description \"Choisissez votre objectif. Retrouvez les\"",
+   "msg": "body text in #617087 on #ffffff reads 5.03:1 (needs 7:1); 4 like it, like \"Code, conduite, engins\", \"Déjà candidat ou respo\", \"Conduite, engins, VTC,\"",
+   "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-contrast"
+   ],
+   "wheres": [
+    "section#univers > div.section-heading > div > p.section-description \"Choisissez votre objectif. Retrouvez les\""
+   ]
+  },
+  {
+   "check": "text-contrast",
+   "where": "section#collaboration > div.container.collaboration-grid > div.collaboration-copy > p:nth-of-type(2) \"Cette porte d’entrée commune vous aide à\"",
+   "msg": "body text in #617087 on #f5f8fc reads 4.72:1 (needs 7:1)",
+   "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-contrast"
+   ],
+   "wheres": [
+    "section#collaboration > div.container.collaboration-grid > div.collaboration-copy > p:nth-of-type(2) \"Cette porte d’entrée commune vous aide à\""
+   ]
+  },
+  {
+   "check": "effect-kind",
+   "where": "(the page)",
+   "msg": "a service page (--type) moves with the scroll: scroll libraries or timelines (ScrollTrigger, ScrollSmoother): effects fit tech, gaming and software pages and a product with a technical subject, never a place, shop or service page (house rule)",
+   "fix": "take the scroll-driven motion off: on a place, shop or service page the page scrolls plainly and the parts sit still",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "effect-kind"
+   ],
+   "wheres": [
+    "(the page)"
+   ]
+  },
+  {
+   "check": "phone-number",
+   "where": "div.contact-grid > article.contact-card.lodene > div.contact-actions > a.phone-link \"+33 6 60 32 50 87\"",
+   "msg": "a phone number in international format: \"+33 6 60 32 50 87\"; a visitor can dial it and reach a stranger (and 1 more like it: again here)",
+   "fix": "drop the number and its tel: link (a \"Request a call\" form may stand in), unless the brief gives the number",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "phone-number"
+   ],
+   "wheres": [
+    "div.contact-grid > article.contact-card.lodene > div.contact-actions > a.phone-link \"+33 6 60 32 50 87\""
+   ]
+  },
+  {
+   "check": "motion-layer",
+   "where": "html[data-motion]",
+   "msg": "the page marks <html data-motion> but motion.css is not loaded: buttons, links, cards and photos answer nothing on hover",
+   "fix": "link assets/motion/motion.css after cards.css and keep data-motion on <html> (both, or neither)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "motion-layer"
+   ],
+   "wheres": [
+    "html[data-motion]"
+   ]
+  },
+  {
+   "check": "empty-area",
+   "where": "main#main-content > section.scroll-world",
+   "msg": "85% of the section is empty: 5344px above its first content, in its 6300px of rows (WARN over 35%, FAIL over 50%)",
+   "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "empty-area"
+   ],
+   "wheres": [
+    "main#main-content > section.scroll-world"
+   ]
+  },
+  {
+   "check": "a11y-name",
+   "where": "main#main-content > section.scroll-world:nth-of-type(1) > div.scroll-world-stage > button.scroll-world-hint",
+   "msg": "a button with no accessible name: a screen reader says only \"link\" or \"button\"",
+   "fix": "give the control words: its text, or an aria-label in the page's language for an icon-only button",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "a11y-name"
+   ],
+   "wheres": [
+    "main#main-content > section.scroll-world:nth-of-type(1) > div.scroll-world-stage > button.scroll-world-hint"
+   ]
+  },
+  {
+   "check": "focus-ring",
+   "where": "main:focus",
+   "msg": "\"main:focus\" in 1n_-956c295lt.css removes the focus outline and sets nothing in its place",
+   "fix": "keep the kit's :focus-visible ring, or put a change of the same strength (a 2px line in --action) in the rule that removes it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "focus-ring"
+   ],
+   "wheres": [
+    "main:focus"
+   ]
+  },
+  {
+   "check": "focus-visible",
+   "where": "section#univers > div.universe-toolbar:nth-of-type(2) > div.filter-tabs > button.selected:nth-of-type(1) \"Tous les univers\"",
+   "msg": "Tab stop 19, button \"Tous les univers\": the focus lands on something you cannot see",
+   "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "focus-visible"
+   ],
+   "wheres": [
+    "section#univers > div.universe-toolbar:nth-of-type(2) > div.filter-tabs > button.selected:nth-of-type(1) \"Tous les univers\""
+   ]
+  },
+  {
+   "check": "focus-visible",
+   "where": "section#univers > div.universe-toolbar:nth-of-type(2) > div.filter-tabs > button:nth-of-type(2) \"Conduite\"",
+   "msg": "Tab stop 20, button \"Conduite\": the focus lands on something you cannot see",
+   "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "focus-visible"
+   ],
+   "wheres": [
+    "section#univers > div.universe-toolbar:nth-of-type(2) > div.filter-tabs > button:nth-of-type(2) \"Conduite\""
+   ]
+  },
+  {
+   "check": "focus-visible",
+   "where": "section#univers > div.universe-toolbar:nth-of-type(2) > div.filter-tabs > button:nth-of-type(3) \"Métiers & sécurité\"",
+   "msg": "Tab stop 21, button \"Métiers & sécurité\": the focus lands on something you cannot see",
+   "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "focus-visible"
+   ],
+   "wheres": [
+    "section#univers > div.universe-toolbar:nth-of-type(2) > div.filter-tabs > button:nth-of-type(3) \"Métiers & sécurité\""
+   ]
+  },
+  {
+   "check": "focus-visible",
+   "where": "div.service-carousel-viewport:nth-of-type(1) > ul.service-carousel-track > li.service-carousel-item:nth-of-type(5) > a.service-card.lodene \"Professionnels de la logistique organisa\"",
+   "msg": "Tab stop 27, a \"Professionnels de la logistique organisant les mou\": the focus lands on something you cannot see",
+   "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "focus-visible"
+   ],
+   "wheres": [
+    "div.service-carousel-viewport:nth-of-type(1) > ul.service-carousel-track > li.service-carousel-item:nth-of-type(5) > a.service-card.lodene \"Professionnels de la logistique organisa\""
+   ]
+  },
+  {
+   "check": "moment-none",
+   "where": "(the page)",
+   "msg": "a service page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+   "fix": "deal one (moments.mjs pick --page service --photo) and mount it in its own section",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "moment-none"
+   ],
+   "wheres": [
+    "(the page)"
+   ]
+  },
+  {
+   "check": "hero-screen",
+   "where": "main#main-content > section.scroll-world \"MassarCode et auto-écolesTunisie+LODENEC\"",
+   "msg": "the hero ends at 6387px on a 900px screen, 5487px below the fold: it ends at the fold, 1px either way (SR-1)",
+   "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "hero-screen"
+   ],
+   "wheres": [
+    "main#main-content > section.scroll-world \"MassarCode et auto-écolesTunisie+LODENEC\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "footer.site-footer \"MassarAUTO-ÉCOLE×LODENEFORMATIONLe bon p\"",
+   "msg": "the section is 368px tall (0.4 screens), 532px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "footer.site-footer \"MassarAUTO-ÉCOLE×LODENEFORMATIONLe bon p\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#etapes \"UN CHEMIN SIMPLEDe l’envie au bon interl\"",
+   "msg": "the section is 520px tall (0.6 screens), 380px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "section#etapes \"UN CHEMIN SIMPLEDe l’envie au bon interl\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#collaboration \"DEUX EXPERTISES, UNE MÊME AMBITIONAvance\"",
+   "msg": "the section is 530px tall (0.6 screens), 370px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 2 more like it: \"ON FAIT LE PREMIER PAS ?\", \"À CHAQUE PROJET, SON UNI\") (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "section#collaboration \"DEUX EXPERTISES, UNE MÊME AMBITIONAvance\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#contact \"ON FAIT LE PREMIER PAS ?Votre projet mér\"",
+   "msg": "the section starts at 8274px, 174px below the screen grid (9 x 900px): sections start on whole screens (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "section#contact \"ON FAIT LE PREMIER PAS ?Votre projet mér\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "main#main-content > section.scroll-world \"MassarCode et auto-écolesTunisie+LODENEC\"",
+   "msg": "the section starts at 87px, 87px below the screen grid (0 x 900px): sections start on whole screens (and 3 more like it: \"À CHAQUE PROJET, SON UNI\", \"DEUX EXPERTISES, UNE MÊM\", \"MassarAUTO-ÉCOLE×LODENEF\") (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "main#main-content > section.scroll-world \"MassarCode et auto-écolesTunisie+LODENEC\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#univers > div.service-carousel > div.service-carousel-viewport \"MassarTunisieCODE · QUIZ · SUIVIMassar A\"",
+   "msg": "scroll-snap-type: inline mandatory on \"MassarTunisieCODE · QUIZ · SUIVI\": sections are one or two screens by their height and padding, the scroll is the browser's own (SR-2)",
+   "fix": "take scroll-snap-type off (html, body and every scroller): sections are one or two screens by height and padding, never snapped",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "section#univers > div.service-carousel > div.service-carousel-viewport \"MassarTunisieCODE · QUIZ · SUIVIMassar A\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "div.container > div.section-heading > div > h2 \"Votre projet mérite une vraie conversati\"",
+   "msg": "the screen at scroll 7754px (the top of section 4) shows 380px of section 5 and the heading of section 5 whole and the content of 2 sections, over 24px each beside section 4: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "div.container > div.section-heading > div > h2 \"Votre projet mérite une vraie conversati\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section#etapes > div.section-heading.centered > div > h2 \"De l’envie au bon interlocuteur.\"",
+   "msg": "the screen at scroll 7224px (the top of section 3) shows 370px of section 4 and the heading of section 4 whole and the content of 2 sections, over 24px each beside section 3: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "section#etapes > div.section-heading.centered > div > h2 \"De l’envie au bon interlocuteur.\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "main#main-content > section.scroll-world > div.scroll-world-stage > nav.journey-rail \"MassarCode et auto-écolesTunisie+LODENEC\"",
+   "msg": "a band: a box 100% of the section wide on a ground of its own that holds only text: the section's own ground is the band (SR-4)",
+   "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "main#main-content > section.scroll-world > div.scroll-world-stage > nav.journey-rail \"MassarCode et auto-écolesTunisie+LODENEC\""
+   ]
+  },
+  {
+   "check": "one-heading",
+   "where": "section#etapes > div.section-heading.centered > div > h2 \"De l’envie au bon interlocuteur.\"",
+   "msg": "headings of two sections show whole on one screen at 9 of 170 scroll positions (5.3%; at scroll 7050, 7100, 7150, 7200px), here with \"Avancer ensemble, chacun avec so\": at most 3% on a desktop (SR-5)",
+   "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-heading"
+   ],
+   "wheres": [
+    "section#etapes > div.section-heading.centered > div > h2 \"De l’envie au bon interlocuteur.\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "main#main-content > section.scroll-world \"MassarCode et auto-écolesTunisie+LODENEC\"",
+   "msg": "the content of section 1 runs 100px from the left and 58px from the right (read from its outermost blocks: no .wrap): 100 and 58px are not one margin (one container, equal margins, 2px either way) (SR-6)",
+   "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "main#main-content > section.scroll-world \"MassarCode et auto-écolesTunisie+LODENEC\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "section#univers \"À CHAQUE PROJET, SON UNIVERSVous voulez \"",
+   "msg": "the content of section 2 runs 95px from the left and 95px from the right (read from its outermost blocks: no .wrap): the page's container starts at 100px (one container, equal margins, 2px either way) (SR-6)",
+   "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "section#univers \"À CHAQUE PROJET, SON UNIVERSVous voulez \""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "a.skip-link \"Aller au contenu\"",
+   "msg": "a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "a.skip-link \"Aller au contenu\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "header.site-header \"MassarAUTO-ÉCOLE×LODENEFORMATIONNos univ\"",
+   "msg": "a <header> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (and 7 more like it: \"MassarAUTO-ÉCOLE×LODENEF\", \"MassarCode et auto-école\", \"À CHAQUE PROJET, SON UNI\") (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "header.site-header \"MassarAUTO-ÉCOLE×LODENEFORMATIONNos univ\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "section#univers > div.service-carousel > div.service-carousel-controls > button.service-carousel-control.previous \"Voir le parcours précédent\"",
+   "msg": "\"Voir le parcours précédent\" runs 77-123px, outside the container lines of section 2 at 95-1345px: full width is for background layers and grounds only (and 18 more like it: \"Voir le parcours suivant\", \"Voir le parcours précéde\", \"Voir le parcours suivant\") (SR-6)",
+   "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "section#univers > div.service-carousel > div.service-carousel-controls > button.service-carousel-control.previous \"Voir le parcours précédent\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "section#collaboration > div.container.collaboration-grid > div.collaboration-partners > p.partner-note \"Votre parcours se poursuit dans l’espace\"",
+   "msg": "1 text block starts on a left line at x 865, 765px from the container's left: text starts on the container's left, or on one split line (x 627, 732, 837) (and 6 more like it: x 651, x 429, \"De l’envie au bon interl\") (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "section#collaboration > div.container.collaboration-grid > div.collaboration-partners > p.partner-note \"Votre parcours se poursuit dans l’espace\""
+   ]
+  },
+  {
+   "check": "row-lines",
+   "where": "section#univers > div.service-carousel > div.service-carousel-viewport > ul.service-carousel-track \"MassarTunisieCODE · QUIZ · SUIVIMassar A\"",
+   "msg": "a row of 6 items: its last item ends at 2600px, the container's right line at 1345px (2px either way) (SR-7)",
+   "fix": "start the row's first item on the container's left line and end its last on the right line, every item one height",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "row-lines"
+   ],
+   "wheres": [
+    "section#univers > div.service-carousel > div.service-carousel-viewport > ul.service-carousel-track \"MassarTunisieCODE · QUIZ · SUIVIMassar A\""
+   ]
+  },
+  {
+   "check": "row-lines",
+   "where": "section#univers > div.service-carousel > div.service-carousel-viewport \"MassarTunisieCODE · QUIZ · SUIVIMassar A\"",
+   "msg": "a sideways scroller: 1260px of it hidden behind overflow-x: auto (SR-7)",
+   "fix": "show every item inside the container, or stack them: no sideways scroller, no half-cut carousel",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "row-lines"
+   ],
+   "wheres": [
+    "section#univers > div.service-carousel > div.service-carousel-viewport \"MassarTunisieCODE · QUIZ · SUIVIMassar A\""
+   ]
+  },
+  {
+   "check": "row-lines",
+   "where": "section#univers > div.service-carousel > div.service-carousel-controls > button.service-carousel-control.next \"Voir le parcours suivant\"",
+   "msg": "\"Voir le parcours suivant\" ends at 1363px, past the container's right line at 1345px (SR-7)",
+   "fix": "end it at the container's right line",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "row-lines"
+   ],
+   "wheres": [
+    "section#univers > div.service-carousel > div.service-carousel-controls > button.service-carousel-control.next \"Voir le parcours suivant\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#collaboration > div.container.collaboration-grid \"DEUX EXPERTISES, UNE MÊME AMBITIONAvance\"",
+   "msg": "the two columns of the split start 19px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+   "fix": "top-align both columns of the split (align-items: start)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#collaboration > div.container.collaboration-grid \"DEUX EXPERTISES, UNE MÊME AMBITIONAvance\""
+   ]
+  },
+  {
+   "check": "empty-visual",
+   "where": "li.service-carousel-item:nth-of-type(4) > a.service-card.lodene > div.service-card-image.image-sst > img \"sst.webp\"",
+   "msg": "the picture sst.webp never loaded: its frame shows empty",
+   "fix": "make the visual draw at every width: a picture that loads, an effect that renders, or its still fallback; never an empty frame",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "empty-visual"
+   ],
+   "wheres": [
+    "li.service-carousel-item:nth-of-type(4) > a.service-card.lodene > div.service-card-image.image-sst > img \"sst.webp\""
+   ]
+  },
+  {
+   "check": "empty-visual",
+   "where": "li.service-carousel-item:nth-of-type(5) > a.service-card.lodene > div.service-card-image.image-logistique > img \"logistics.jpg\"",
+   "msg": "the picture logistics.jpg never loaded: its frame shows empty",
+   "fix": "make the visual draw at every width: a picture that loads, an effect that renders, or its still fallback; never an empty frame",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "empty-visual"
+   ],
+   "wheres": [
+    "li.service-carousel-item:nth-of-type(5) > a.service-card.lodene > div.service-card-image.image-logistique > img \"logistics.jpg\""
+   ]
+  },
+  {
+   "check": "overlap-text",
+   "where": "div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-scrim",
+   "msg": "lies over the text \"01 / 06\" (div.scroll-world-copy.container > p.scroll-world-count) (and 5 more like it: div.scroll-world-scrim, div.scroll-world-scrim, div.scroll-world-scrim, div.scroll-world-scrim, ...)",
+   "fix": "move the box off the text (or the text off the box)",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "overlap-text"
+   ],
+   "wheres": [
+    "div.scroll-world-stage > div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-scrim"
+   ]
+  },
+  {
+   "check": "tap-size",
+   "where": "div.container.header-inner > div.header-actions > div.language-switch > button.active \"FR Français\"",
+   "msg": "a 25x27px tap target: 0px from the next one (\"ع العربية\"), so a thumb lands on the wrong one",
+   "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+   "widths": [
+    390,
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "tap-size"
+   ],
+   "wheres": [
+    "div.container.header-inner > div.header-actions > div.language-switch > button.active \"FR Français\""
+   ]
+  },
+  {
+   "check": "tap-size",
+   "where": "div.container.header-inner > div.header-actions > div.language-switch > button:nth-of-type(2) \"ع العربية\"",
+   "msg": "a 25x27px tap target: 0px from the next one (\"FR Français\"), so a thumb lands on the wrong one",
+   "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+   "widths": [
+    390,
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "tap-size"
+   ],
+   "wheres": [
+    "div.container.header-inner > div.header-actions > div.language-switch > button:nth-of-type(2) \"ع العربية\""
+   ]
+  },
+  {
+   "check": "scroll-reveal",
+   "where": "div.service-carousel-viewport > ul.service-carousel-track > li.service-carousel-item:nth-of-type(1) > a.service-card.massar \"Massar Tunisie CODE · QUIZ · SUIVI Massa\"",
+   "msg": "starts \"-webkit-text-fill-color\" (0.2 s) the moment it is scrolled into view (an IntersectionObserver) on span.card-open",
+   "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "scroll-reveal"
+   ],
+   "wheres": [
+    "div.service-carousel-viewport > ul.service-carousel-track > li.service-carousel-item:nth-of-type(1) > a.service-card.massar \"Massar Tunisie CODE · QUIZ · SUIVI Massa\""
+   ]
+  },
+  {
+   "check": "heading-scale",
+   "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(2) > div.scroll-world-copy.container > h2 \"Apprenez le code avec Massar.\"",
+   "msg": "an h2 at 39px, as large as the h1 (39px) or larger (and 2 more like it: \"Prenez les commandes.\", \"Faites de la mobilité un\")",
+   "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "heading-scale"
+   ],
+   "wheres": [
+    "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(2) > div.scroll-world-copy.container > h2 \"Apprenez le code avec Massar.\""
+   ]
+  },
+  {
+   "check": "contrast",
+   "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > p.scroll-world-count \"01 / 06\"",
+   "msg": "body text over a effect reads at 2.2:1 at its worst tenth (needs 4.5:1) (and 5 more like it: \"02 / 06\", \"Apprentissage numérique\", \"03 / 06\", \"Formation pratique\", ...)",
+   "fix": "put the text on a calm part of the picture, or on a solid panel",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "contrast"
+   ],
+   "wheres": [
+    "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > p.scroll-world-count \"01 / 06\""
+   ]
+  },
+  {
+   "check": "contrast",
+   "where": "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > p.scroll-world-eyebrow \"Six univers de formation\"",
+   "msg": "body text over a effect reads at 2.9:1 at its worst tenth (needs 4.5:1), on a busy ground (and 5 more like it: \"04 / 06\", \"Métiers de la mobilité\", \"Compétences complémentai\", \"06 / 06\", ...)",
+   "fix": "put the text on a calm part of the picture, or on a solid panel",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "contrast"
+   ],
+   "wheres": [
+    "div.scroll-world-scenes > article.scroll-world-scene:nth-of-type(1) > div.scroll-world-copy.container > p.scroll-world-eyebrow \"Six univers de formation\""
+   ]
+  },
+  {
+   "check": "fold-action",
+   "where": "article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > div.scroll-world-actions > a.button.button-green",
+   "msg": "the hero's main button \"Contacter LODENE\" starts 3819px below the first screen (844px tall): it is not seen on load",
+   "fix": "bring the hero's buttons onto the first screen: a shorter headline or line, the picture under the buttons",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "fold-action"
+   ],
+   "wheres": [
+    "article.scroll-world-scene:nth-of-type(6) > div.scroll-world-copy.container > div.scroll-world-actions > a.button.button-green"
+   ]
+  },
+  {
+   "check": "tap-size",
+   "where": "section#collaboration > div.container.collaboration-grid > div.collaboration-copy > a.text-link \"Trouver mon univers\"",
+   "msg": "a 159x22px tap target: 0px from the next one (\"Massar AUTO-ÉCOLE × LODE\"), so a thumb lands on the wrong one",
+   "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "tap-size"
+   ],
+   "wheres": [
+    "section#collaboration > div.container.collaboration-grid > div.collaboration-copy > a.text-link \"Trouver mon univers\""
+   ]
+  },
+  {
+   "check": "tap-size",
+   "where": "section#etapes > a.text-link.steps-link \"Explorer nos univers\"",
+   "msg": "a 159x32px tap target: 0px from the next one (\"Massar AUTO-ÉCOLE × LODE\"), so a thumb lands on the wrong one",
+   "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "tap-size"
+   ],
+   "wheres": [
+    "section#etapes > a.text-link.steps-link \"Explorer nos univers\""
+   ]
+  },
+  {
+   "check": "tap-size",
+   "where": "div.contact-grid > article.contact-card.massar > div.contact-actions > a.text-link \"Espace auto-école — S’ouvre dans un nouv\"",
+   "msg": "a 145x22px tap target: 0px from the next one (\"Massar AUTO-ÉCOLE × LODE\"), so a thumb lands on the wrong one",
+   "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "tap-size"
+   ],
+   "wheres": [
+    "div.contact-grid > article.contact-card.massar > div.contact-actions > a.text-link \"Espace auto-école — S’ouvre dans un nouv\""
+   ]
+  }
+ ],
+ "waived": [],
+ "warnCount": 54,
+ "at": "2026-11-18T15:01:08.551Z",
+ "openTold": true
+}

@@ -1,5 +1,5 @@
 import { ArrowUp, ArrowUpRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useLocale } from "../contexts/LocaleContext.jsx";
 import { services, lodene } from "../data/catalog.js";
 import { Brand, ExternalLink } from "./Shared.jsx";
@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-intro">
-            <Link to="/" aria-label={t.nav.home}>
+            <Link href="/" aria-label={t.nav.home}>
               <Brand compact />
             </Link>
             <h3>{t.footer.tagline}</h3>
@@ -22,7 +22,7 @@ export default function Footer() {
             <ul>
               {services.map((s) => (
                 <li key={s.id}>
-                  <Link to={s.path}>{t.services[s.id].title}</Link>
+                  <Link href={s.path}>{t.services[s.id].title}</Link>
                 </li>
               ))}
             </ul>
@@ -31,7 +31,7 @@ export default function Footer() {
             <h4>{t.footer.links}</h4>
             <ul>
               <li>
-                <Link to="/#collaboration">{t.nav.collaboration}</Link>
+                <Link href="/#collaboration">{t.nav.collaboration}</Link>
               </li>
               <li>
                 <ExternalLink href={lodene.portal}>
@@ -43,7 +43,7 @@ export default function Footer() {
                 <a href={`mailto:${lodene.email}`}>{t.footer.contact}</a>
               </li>
               <li>
-                <Link to="/confidentialite">{t.footer.privacy}</Link>
+                <Link href="/confidentialite">{t.footer.privacy}</Link>
               </li>
             </ul>
           </div>
@@ -54,18 +54,6 @@ export default function Footer() {
           </span>
           <a
             href="#main-content"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({
-                top: 0,
-                behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
-                  ? "instant"
-                  : "smooth",
-              });
-              document
-                .getElementById("main-content")
-                ?.focus({ preventScroll: true });
-            }}
           >
             {t.footer.top}
             <ArrowUp size={15} />

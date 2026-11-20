@@ -11,7 +11,7 @@ import {
   Phone,
   Check,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useLocale } from "../contexts/LocaleContext.jsx";
 import { lodene, services } from "../data/catalog.js";
 import { candidateUrl, schoolUrl } from "../data/links.js";
@@ -101,9 +101,13 @@ export function SectionHeading({
   description,
   children,
   centered = false,
+  motion = false,
 }) {
   return (
-    <div className={`section-heading ${centered ? "centered" : ""}`}>
+    <div
+      className={`section-heading ${centered ? "centered" : ""}`}
+      data-section-piece={motion ? "heading" : undefined}
+    >
       <div>
         <p className="eyebrow">{eyebrow}</p>
         <h2>{title}</h2>
@@ -118,7 +122,7 @@ export function ServiceCard({ service }) {
   const { t } = useLocale();
   const copy = t.services[service.id];
   return (
-    <Link to={service.path} className={`service-card ${service.brand}`}>
+    <Link href={service.path} className={`service-card ${service.brand}`}>
       <div className={`service-card-image image-${service.id}`}>
         <img
           src={service.image}
@@ -178,17 +182,26 @@ export function LodeneContact({ subject, compact = false }) {
   );
 }
 
-export function ContactSection() {
+export function ContactSection({ sectionRef, motion = false }) {
   const { t } = useLocale();
   return (
-    <section className="contact-section section" id="contact">
+    <section
+      className="contact-section section"
+      id="contact"
+      ref={sectionRef}
+      data-section-transition={motion ? "" : undefined}
+    >
       <div className="container">
         <SectionHeading
           eyebrow={t.contact.eyebrow}
           title={t.contact.title}
           description={t.contact.description}
+          motion={motion}
         />
-        <div className="contact-grid">
+        <div
+          className="contact-grid"
+          data-section-piece={motion ? "body" : undefined}
+        >
           <article className="contact-card massar">
             <Brand single="massar" />
             <h3>{t.contact.massarTitle}</h3>
@@ -239,9 +252,9 @@ export function Breadcrumb({ title }) {
   const { t } = useLocale();
   return (
     <nav className="breadcrumb" aria-label={t.nav.home}>
-      <Link to="/">{t.nav.home}</Link>
+      <Link href="/">{t.nav.home}</Link>
       <span>/</span>
-      <Link to="/#univers">{t.nav.univers}</Link>
+      <Link href="/#univers">{t.nav.univers}</Link>
       <span>/</span>
       <span aria-current="page">{title}</span>
     </nav>

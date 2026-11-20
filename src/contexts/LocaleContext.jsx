@@ -1,3 +1,5 @@
+"use client";
+
 import { createContext, useContext, useEffect, useState } from "react";
 import fr from "../i18n/fr.js";
 import ar from "../i18n/ar.js";
@@ -5,15 +7,16 @@ import ar from "../i18n/ar.js";
 const LocaleContext = createContext(null);
 
 export function LocaleProvider({ children }) {
-  const [locale, setLocale] = useState(() => {
+  const [locale, setLocale] = useState("fr");
+  useEffect(() => {
     try {
-      return localStorage.getItem("massar-lodene-language") === "ar"
-        ? "ar"
-        : "fr";
+      if (localStorage.getItem("massar-lodene-language") === "ar") {
+        queueMicrotask(() => setLocale("ar"));
+      }
     } catch {
-      return "fr";
+      /* Private browsing may disable storage. */
     }
-  });
+  }, []);
   useEffect(() => {
     document.documentElement.lang = locale;
     document.documentElement.dir = locale === "ar" ? "rtl" : "ltr";

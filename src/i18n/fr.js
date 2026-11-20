@@ -54,6 +54,68 @@ export default {
     smallImageAlt: "Échanges lors d’un atelier de formation",
     bottom: "Du premier code aux nouvelles compétences.",
   },
+  scrollWorld: {
+    ariaLabel: "Parcours interactif Massar et LODENE",
+    band: {
+      ariaLabel: "Accès direct aux univers de formation",
+      count: "6 univers",
+      description: "réunis pour construire votre parcours",
+      items: [
+        { label: "Code", href: "/massar" },
+        { label: "Conduite & engins", href: "/lodene/conduite" },
+        { label: "VTC", href: "/lodene/vtc" },
+        { label: "Logistique", href: "/lodene/logistique" },
+        { label: "SST", href: "/lodene/sst" },
+        { label: "Langues", href: "/lodene/langues" },
+      ],
+    },
+    sections: [
+      {
+        id: "cap", label: "Votre cap", eyebrow: "Six univers de formation",
+        title: "Code, conduite et formations professionnelles.",
+        body: "De la première règle du code à la maîtrise d’un métier, Massar et LODENE transforment chaque ambition en parcours concret.",
+        alt: "Campus miniature où plusieurs chemins de formation se rejoignent",
+        tagsLabel: "Repères du parcours", tags: ["Massar", "LODENE", "Tunisie · France"],
+      },
+      {
+        id: "massar", label: "Code Massar", eyebrow: "Apprentissage numérique",
+        title: "Apprenez le code avec Massar.",
+        body: "Retrouvez vos cours, entraînez-vous avec les quiz et suivez votre progression avec votre auto-école.",
+        alt: "Diorama d’un candidat qui apprend le code de la route avec son formateur",
+        tagsLabel: "Fonctions Massar", tags: ["Cours", "Quiz", "Suivi"],
+      },
+      {
+        id: "conduite", label: "Conduite et engins", eyebrow: "Formation pratique",
+        title: "Prenez les commandes.",
+        body: "Permis automobile, tractopelle, chariot électrique, gerbeur et nacelle composent des parcours bien identifiés.",
+        alt: "Diorama d’un centre d’apprentissage de la conduite et des engins",
+        tagsLabel: "Parcours de conduite", tags: ["Permis", "Engins", "Manutention"],
+      },
+      {
+        id: "mobilite", label: "VTC et logistique", eyebrow: "Métiers de la mobilité",
+        title: "Faites de la mobilité un métier.",
+        body: "Préparez un projet VTC ou développez vos compétences dans l’organisation des flux, l’entrepôt et le transport.",
+        alt: "Diorama réunissant transport de personnes et opérations logistiques",
+        tagsLabel: "Métiers présentés", tags: ["VTC", "Flux", "Transport"],
+      },
+      {
+        id: "competences", label: "SST et langues", eyebrow: "Compétences complémentaires",
+        title: "Ajoutez des compétences utiles.",
+        body: "Prévention, gestes de secours, anglais, espagnol ou allemand : choisissez les compétences adaptées à votre projet.",
+        alt: "Diorama de deux ateliers consacrés au secourisme et aux langues",
+        tagsLabel: "Compétences présentées", tags: ["SST", "Anglais", "Espagnol · Allemand"],
+      },
+      {
+        id: "lodene", label: "Votre prochaine étape", eyebrow: "Échange avec le centre",
+        title: "Choisissez votre prochaine formation.",
+        body: "Présentez votre objectif à l’équipe LODENE et identifiez le parcours qui correspond à votre situation.",
+        alt: "Diorama de l’entrée d’un centre de formation LODENE",
+        tagsLabel: "Accès au centre", tags: ["Conduite", "Métiers", "Langues"],
+        cta: { label: "Contacter LODENE", href: "#contact" },
+        secondary: { label: "Voir tous les univers", href: "/#univers" },
+      },
+    ],
+  },
   univers: {
     eyebrow: "À CHAQUE PROJET, SON UNIVERS",
     title: "Vous voulez aller où ?",
@@ -65,6 +127,9 @@ export default {
     languages: "Langues",
     filter: "Filtrer les univers",
     results: "univers",
+    carouselLabel: "Parcours disponibles",
+    previous: "Voir le parcours précédent",
+    next: "Voir le parcours suivant",
   },
   services: {
     massar: {
@@ -210,19 +275,22 @@ export default {
   },
   collaboration: {
     eyebrow: "DEUX EXPERTISES, UNE MÊME AMBITION",
-    title: "Avancer ensemble, chacun avec son savoir-faire.",
+    title: "Deux savoir-faire. Votre prochaine étape.",
     description:
-      "Cette porte d’entrée commune vous aide à trouver votre chemin. Massar accompagne l’apprentissage numérique du code ; LODENE ouvre sur la conduite et la formation professionnelle.",
-    massarTitle: "La route commence par le savoir.",
+      "Apprendre le code avec Massar. Développer vos compétences avec LODENE. Choisissez l’univers qui correspond à votre projet.",
+    massarTitle: "Le code, à votre rythme.",
     massarText:
-      "Une plateforme pensée pour les candidats et les auto-écoles, en arabe et en français.",
-    lodeneTitle: "Les compétences vous emmènent plus loin.",
+      "Une plateforme d’apprentissage du code en arabe et en français, pour les candidats et les auto-écoles.",
+    massarLink: "Découvrir Massar",
+    lodeneTitle: "Des compétences pour avancer.",
+    lodeneLink: "Découvrir LODENE",
     lodeneText:
       "Un centre de formation à Conflans-Sainte-Honorine pour construire votre prochain parcours.",
     note: "Votre parcours se poursuit dans l’espace de l’équipe concernée.",
     link: "Trouver mon univers",
   },
   steps: {
+    stepLabel: "ÉTAPE",
     eyebrow: "UN CHEMIN SIMPLE",
     title: "De l’envie au bon interlocuteur.",
     items: [

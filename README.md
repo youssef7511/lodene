@@ -1,6 +1,6 @@
-# Massar × LODENE — frontend indépendant
+# Massar × LODENE — frontend Next.js
 
-Première implémentation de la nouvelle porte d’entrée commune : une page d’accueil, six univers et une navigation français/arabe. Ce dépôt contient uniquement le frontend indépendant : son propre `package.json`, son serveur Vite et ses ressources locales.
+Porte d’entrée commune construite avec Next.js App Router : une page d’accueil, six univers et une navigation français/arabe. Le projet produit un site statique autonome dans `out/` et conserve toutes ses ressources localement.
 
 ## Démarrer
 
@@ -13,7 +13,7 @@ npm install
 npm run dev
 ```
 
-Ouvrir **http://127.0.0.1:5174**. Le port est fixe : Vite signale une erreur si un autre service l’utilise.
+Ouvrir **http://127.0.0.1:5174**.
 
 ```powershell
 npm run lint
@@ -22,7 +22,7 @@ npm run build
 npm run preview
 ```
 
-La prévisualisation du build utilise **http://127.0.0.1:4176**. Pour un hébergement ultérieur, configurer le serveur pour rediriger les URL de l’application vers `index.html` (routage React). Cet aperçu contient une directive `noindex`.
+La prévisualisation de l’export statique utilise **http://127.0.0.1:4176**. Le dossier `out/` peut être déployé sur n’importe quel hébergeur statique. Cet aperçu contient toujours une directive `noindex`.
 
 ## Parcours
 
@@ -46,27 +46,29 @@ L’application ne crée pas de comptes et n’appelle aucune API. Le bouton « 
 Pour changer cette destination, copier `.env.example` dans `.env.local` et définir :
 
 ```dotenv
-VITE_MASSAR_URL=http://localhost:3000
+NEXT_PUBLIC_MASSAR_URL=http://localhost:3000
+NEXT_PUBLIC_SITE_URL=https://votre-domaine.example
 ```
 
 Redémarrer Vite après modification. Les destinations LODENE sont centralisées dans `src/data/catalog.js` : site officiel, catalogue, portail apprenant, téléphone et e-mail. Les liens externes s’ouvrent dans un nouvel onglet avec `noopener noreferrer`.
 
 ## Organisation
 
-- `src/pages/` : accueil et espaces de chaque univers.
-- `src/components/` : identité partagée, menu mobile, dialogue d’accès, cartes et contact.
+- `app/` : routes, layouts et métadonnées Next.js.
+- `src/views/` : vues clientes de l’accueil et des univers.
+- `src/components/` : identité partagée, navigation, cartes, contact et animation GSAP de l’accueil.
 - `src/i18n/fr.js`, `ar.js` : libellés et textes. L’arabe utilise une mise en page RTL ; les marques et coordonnées latines restent isolées.
 - `src/data/` : destinations, catalogue des univers et engins.
-- `src/styles.css` : style et adaptations mobile / tablette / bureau.
+- `src/styles.css` : style global et adaptations mobile / tablette / bureau.
 - `public/images/` : visuels locaux et leur provenance dans `sources.json`.
 - `public/fonts/` : Outfit et Tajawal auto-hébergées, licences SIL OFL incluses.
 - `tests/` : cohérence des parcours, traductions, visuels et destinations de connexion.
 
-La seule donnée persistée est la langue, dans `localStorage` sous `massar-lodene-language`. Aucun service tiers n’est nécessaire au rendu initial de la page.
+La seule donnée persistée est la langue, dans `localStorage` sous `massar-lodene-language`. Les pages sont pré-générées par Next.js et aucun service tiers n’est nécessaire au rendu initial.
 
 ## Vérification de cette version
 
-- ESLint, les quatre tests du catalogue et le build de production passent.
+- ESLint, les quatre tests du catalogue et l’export statique Next.js constituent les contrôles du projet.
 - Contrôle navigateur sous Microsoft Edge : neuf routes, français/arabe, largeurs 320, 390, 768, 1024 et 1440 px, soit 90 combinaisons. Aucun débordement horizontal ni image manquante.
 - Filtres, navigation entre univers, ancres, détails des quatre engins, liens des trois comptes, menu tactile sur tablette, fermeture au clavier et persistance de la langue vérifiés.
 - Aucun appel à une API métier ni erreur de console pendant les parcours testés.
